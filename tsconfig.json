@@ -1,3 +1,3 @@
 {
-  "extends": "@miit/typescript-config/base.json"
+  "extends": "@miit/typescript-config/base.json",
 }
