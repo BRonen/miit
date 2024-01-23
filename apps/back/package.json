@@ -1,0 +1,33 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "watch": "concurrently \"npm:watch:build\" \"npm:watch:dev\"",
+    "watch:dev": "NODE_ENV=development node --watch dist",
+    "watch:build": "NODE_ENV=development webpack --watch --progress",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "dependencies": {
+    "graphql-helix": "^1.13.0",
+    "koa": "^2.15.0",
+    "mongoose": "^8.1.0"
+  },
+  "devDependencies": {
+    "@miit/eslint-config": "workspace:*",
+    "@miit/typescript-config": "workspace:*",
+    "@types/eslint": "^8.56.1",
+    "@types/koa": "^2.14.0",
+    "@types/node": "^20.10.6",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.56.0",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
