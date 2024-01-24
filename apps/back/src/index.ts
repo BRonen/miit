@@ -1,15 +1,16 @@
-import Koa from "koa";
+import { createApp, loadGraphQLRoute, loadHealthCheckRoute } from "./app";
+import { loadDatabase } from "./database";
 
-const app = new Koa();
+(async () => {
+  const app = createApp();
+  
+  loadHealthCheckRoute(app);
+  loadGraphQLRoute(app);
+  
+  // await loadDatabase();
 
-const a: number = 2;
-
-console.log(a);
-
-app.use((ctx) => {
-  ctx.body = "hello world w";
-});
-
-app.listen(9000, () => {
-  console.log("listening at http://0.0.0.0:9000/");
-});
+  app.listen(
+    9000,
+    () => console.log("listening at http://0.0.0.0:9000/"),
+  );
+})();
