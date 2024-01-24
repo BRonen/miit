@@ -5,22 +5,27 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "watch": "concurrently \"npm:watch:build\" \"npm:watch:dev\"",
+    "dev": "concurrently \"npm:watch:build\" \"npm:watch:dev\"",
     "watch:dev": "NODE_ENV=development node --watch dist",
     "watch:build": "NODE_ENV=development webpack --watch --progress",
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
+    "@koa/router": "^12.0.1",
+    "graphql": "^16.8.1",
     "graphql-helix": "^1.13.0",
     "koa": "^2.15.0",
+    "koa-bodyparser": "^4.4.1",
     "mongoose": "^8.1.0"
   },
   "devDependencies": {
     "@miit/eslint-config": "workspace:*",
     "@miit/typescript-config": "workspace:*",
-    "@types/eslint": "^8.56.1",
+    "@types/eslint": "^8.56.2",
     "@types/koa": "^2.14.0",
-    "@types/node": "^20.10.6",
+    "@types/koa-bodyparser": "^4.3.12",
+    "@types/koa__router": "^12.0.4",
+    "@types/node": "^20.11.5",
     "concurrently": "^8.2.2",
     "eslint": "^8.56.0",
     "ts-loader": "^9.5.1",
