@@ -1,5 +1,5 @@
 import { createApp, loadGraphQLRoute, loadHealthCheckRoute } from "./app";
-import { loadDatabase } from "./database";
+// import { loadDatabase } from "./database";
 
 (async () => {
   const app = createApp();
