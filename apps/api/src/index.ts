@@ -7,7 +7,7 @@ import { loadDatabase } from "./database";
   loadHealthCheckRoute(app);
   loadGraphQLRoute(app);
   
-  // await loadDatabase();
+  await loadDatabase();
 
   app.listen(
     9000,
