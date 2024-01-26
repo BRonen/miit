@@ -1,16 +1,16 @@
 import { GraphQLSchema, GraphQLObjectType } from "graphql";
-import { usersMutation, usersQuery } from "./users"
+import { createUserMutation, usersPaginatedQuery } from "./users"
 
 const query = new GraphQLObjectType({
   name: 'RootQuery',
   description: 'Root Query',
-  fields: () => ({ usersQuery }),
+  fields: () => ({ usersPaginatedQuery }),
 });
 
 const mutation = new GraphQLObjectType({
   name: 'RootMutation',
   description: 'Root Mutation',
-  fields: () => ({ usersMutation }),
+  fields: () => ({ createUserMutation }),
 });
 
 export const schema = new GraphQLSchema({ query, mutation });
